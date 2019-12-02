@@ -1,0 +1,16 @@
+.header {
+  height: 100px;
+  width: 100vw;
+  background-color: #3E3E3E;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header > h1 {
+  font-size: 40px;
+  font-family: 'Calistoga', cursive;
+  color: #FFB526;
+  margin: 0 50px;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}

@@ -1,0 +1,46 @@
+.routes-container {
+  background-color: #4B5974;
+  height: 95%;
+  width: 250px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: grey 0px 3px 5px 2px;
+}
+
+.routes-container > h1 {
+  font-family: 'Calistoga', cursive;
+  font-size: 28px;
+  margin: 10px;
+  color: #FFB526;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
+
+.route {
+  height: auto;
+  width: 100%;
+  background-color: rgb(97, 122, 172);
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: rgba(29, 29, 29, 0.24) 0px 3px 5px 2px;
+  margin: 5px;
+}
+
+.route button {
+  float: right;
+  border: none;
+  color: rgb(177, 177, 255);
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.route button:hover {
+  color: rgb(255, 110, 110);
+  cursor: pointer;
+}

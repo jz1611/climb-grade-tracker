@@ -1,0 +1,53 @@
+.route-add {
+  background-color: #4B5974;
+  height: 275px;
+  width: 450px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: grey 0px 3px 5px 2px;
+}
+
+.route-add button {
+  height: 40px;
+  width: 125px;
+  margin-top: 20px;
+  align-self: center;
+  background-color: #FFB526;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.445) 0px 2px 5px 2px;
+  outline: none;
+}
+
+.route-add button:hover {
+  background-color: rgb(255, 201, 93);
+  cursor: pointer;
+}
+
+.route-add > div {
+  width: 100%;
+}
+
+.route-add h1 {
+  float: left;
+}
+
+.route-add input {
+  background-color: rgb(97, 122, 172);
+  border-radius: 15px;
+  border: none;
+  height: 24px;
+  width: 250px;
+  padding: 0 10px;
+  outline: none;
+  color: white;
+  float: right;
+}

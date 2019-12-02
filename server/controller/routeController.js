@@ -9,7 +9,7 @@ function getIndex(id) {
 
 module.exports = {
   getRoutes: (req, res, next) => {
-    res.status(200).send(puppies);
+    res.status(200).send(routes);
   },
 
   getRouteByID: (req, res, next) => {
@@ -47,12 +47,12 @@ module.exports = {
     res.status(200).send(routes);
   },
 
-  deleteRoute: (req, res, next) => {
+  removeRoute: (req, res, next) => {
     const { id } = req.params;
     const index = getIndex(id);
     if (index !== -1) {
       routes.splice(index, 1);
-      res.status(200).send(puppies);
+      res.status(200).send(routes);
     } else {
       res.status(404).send(`No route to delete with ID ${id}.`);
     }

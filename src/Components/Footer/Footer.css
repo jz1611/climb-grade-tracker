@@ -1,0 +1,13 @@
+.footer-container {
+  height: 75px;
+  width: 100vw;
+  background-color: #606060;
+}
+
+.footer-container > h1 {
+  font-size: 24px;
+  float:right;
+  margin: 25px 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: grey;
+}
