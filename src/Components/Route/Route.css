@@ -1,0 +1,22 @@
+.route-details {
+  background-color: #4B5974;
+  height: 225px;
+  width: 450px;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: grey 0px 3px 5px 2px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.route-details h1 {
+  color: #FFB526;
+  font-size: 32px;
+  font-family: 'Calistoga', cursive;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+  margin-bottom: 10px;
+}

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import RouteList from '../RouteList/RouteList';
 import RouteAdd from '../RouteAdd/RouteAdd';
-// import Route from '../Route/Route';
+import Route from '../Route/Route';
 
 import './Main.css';
 
@@ -12,7 +12,12 @@ class Main extends React.Component {
     super(props);
     this.state = {
       routes: [],
-      selectedID: 1
+      selectedID: 1,
+      nickname: "",
+      difficulty: "",
+      attempts: "",
+      completes: "",
+      record: ""
     };
 
     this.postRoute = this.postRoute.bind(this);
@@ -38,14 +43,6 @@ class Main extends React.Component {
       });
     }).catch((err) => console.log(err));
   }
-
-  // getRouteByID(id) {
-  //   axios
-  //     .get(`/api/route/${id}`)
-  //     .then(res => {
-
-  //     })
-  // }
 
   postRoute() {
     const { nickname, difficulty, attempts, completes, record } = this.state;
@@ -88,19 +85,20 @@ class Main extends React.Component {
           selectedID={ this.state.selectedID }
           selectID={ this.selectID }
         />
-        {/* <Route
-          selectedID={ this.state.selectedID }
-          routes={ this.state.routes }
-        /> */}
-        <RouteAdd
-          postRoute={ this.postRoute }
-          changeHandler={ this.changeHandler }
-          nickname={ this.nickname }
-          difficulty={ this.difficulty }
-          attempts={ this.attempts }
-          completes={ this.completes }
-          record={ this.record }
-        />
+        <div className="center">
+          <Route
+            selectedID={ this.state.selectedID }
+          />
+          <RouteAdd
+            postRoute={ this.postRoute }
+            changeHandler={ this.changeHandler }
+            nickname={ this.nickname }
+            difficulty={ this.difficulty }
+            attempts={ this.attempts }
+            completes={ this.completes }
+            record={ this.record }
+          />
+        </div>
       </div>
     </div>
   }

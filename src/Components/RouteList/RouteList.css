@@ -47,4 +47,5 @@
 .route button:hover {
   color: rgb(255, 61, 61);
   cursor: pointer;
+  text-shadow: rgba(0, 0, 0, 0.692) 0px 0px 3px;
 }

@@ -10,7 +10,6 @@ class RouteList extends React.Component {
         <button onClick={() => this.props.removeRoute(route.id)}>X</button>
         <div>{route.nickname}</div>
         <div>Difficulty:&nbsp;{route.difficulty}</div>
-        <div>{route.completes} Completions</div>
       </div>
     })
 
