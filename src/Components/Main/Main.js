@@ -3,9 +3,9 @@ import axios from 'axios';
 
 import RouteList from '../RouteList/RouteList';
 import RouteAdd from '../RouteAdd/RouteAdd';
+// import Route from '../Route/Route';
 
 import './Main.css';
-import Route from '../Route/Route';
 
 class Main extends React.Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class Main extends React.Component {
     this.postRoute = this.postRoute.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
     this.removeRoute = this.removeRoute.bind(this);
+    this.selectID = this.selectID.bind(this);
   }
 
   componentDidMount() {
@@ -35,8 +36,16 @@ class Main extends React.Component {
       this.setState({
         routes: res.data
       });
-    });
+    }).catch((err) => console.log(err));
   }
+
+  // getRouteByID(id) {
+  //   axios
+  //     .get(`/api/route/${id}`)
+  //     .then(res => {
+
+  //     })
+  // }
 
   postRoute() {
     const { nickname, difficulty, attempts, completes, record } = this.state;
@@ -51,7 +60,7 @@ class Main extends React.Component {
           completes: "",
           record: ""
         });
-      });
+      }).catch((err) => console.log(err));
   }
 
   removeRoute(id) {
@@ -61,22 +70,28 @@ class Main extends React.Component {
         this.setState({
           routes: res.data
         });
-      });
+      }).catch((err) => console.log(err));
+  }
+
+  selectID(id) {
+    this.setState({
+      selectedID: id
+    });
   }
 
   render() {
-    console.log(this.state.routes)
     return <div className="main-container">
       <div className="inner-container">
         <RouteList
           routes={ this.state.routes }
           removeRoute={ this.removeRoute }
           selectedID={ this.state.selectedID }
+          selectID={ this.selectID }
         />
-        <Route
+        {/* <Route
           selectedID={ this.state.selectedID }
           routes={ this.state.routes }
-        />
+        /> */}
         <RouteAdd
           postRoute={ this.postRoute }
           changeHandler={ this.changeHandler }

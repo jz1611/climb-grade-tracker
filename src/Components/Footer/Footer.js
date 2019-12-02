@@ -4,9 +4,9 @@ import './Footer.css';
 
 class Footer extends React.Component {
   render() {
-    return <div className="footer-container">
+    return <footer className="footer-container">
       <h1>Jeff Zivkovic</h1>
-    </div>
+    </footer>
   }
 }
 

@@ -6,7 +6,7 @@ class RouteList extends React.Component {
   render() {
     const { routes } = this.props;
     const mappedRoutes = routes.map(route => {
-      return <div key={route.id} className="route">
+      return <div key={route.id} className="route" onClick={() => this.props.selectID(route.id)}>
         <button onClick={() => this.props.removeRoute(route.id)}>X</button>
         <div>{route.nickname}</div>
         <div>Difficulty:&nbsp;{route.difficulty}</div>
