@@ -12,7 +12,7 @@ class Main extends React.Component {
     super(props);
     this.state = {
       routes: [],
-      selectedID: 1,
+      selectedRoute: {},
       nickname: "",
       difficulty: "",
       attempts: "",
@@ -23,11 +23,12 @@ class Main extends React.Component {
     this.postRoute = this.postRoute.bind(this);
     this.changeHandler = this.changeHandler.bind(this);
     this.removeRoute = this.removeRoute.bind(this);
-    this.selectID = this.selectID.bind(this);
+    this.getRouteByID = this.getRouteByID.bind(this);
   }
 
   componentDidMount() {
     this.getRoutes();
+    this.getRouteByID(1);
   }
 
   changeHandler(key, value) {
@@ -70,10 +71,14 @@ class Main extends React.Component {
       }).catch((err) => console.log(err));
   }
 
-  selectID(id) {
-    this.setState({
-      selectedID: id
-    });
+  getRouteByID(id) {
+    axios
+      .get(`/api/route/${id}`)
+      .then(res => {
+        this.setState({
+          selectedRoute: res.data
+        });
+      }).catch((err) => console.log(err));
   }
 
   render() {
@@ -82,21 +87,20 @@ class Main extends React.Component {
         <RouteList
           routes={ this.state.routes }
           removeRoute={ this.removeRoute }
-          selectedID={ this.state.selectedID }
-          selectID={ this.selectID }
+          getRouteByID={ this.getRouteByID }
         />
         <div className="center">
           <Route
-            selectedID={ this.state.selectedID }
+            selectedRoute={ this.state.selectedRoute }
           />
           <RouteAdd
             postRoute={ this.postRoute }
             changeHandler={ this.changeHandler }
-            nickname={ this.nickname }
-            difficulty={ this.difficulty }
-            attempts={ this.attempts }
-            completes={ this.completes }
-            record={ this.record }
+            nickname={ this.state.nickname }
+            difficulty={ this.state.difficulty }
+            attempts={ this.state.attempts }
+            completes={ this.state.completes }
+            record={ this.state.record }
           />
         </div>
       </div>
