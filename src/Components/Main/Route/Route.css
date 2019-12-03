@@ -21,6 +21,11 @@
   margin-bottom: 10px;
 }
 
+.no-route {
+  justify-self: center;
+  align-self: center;
+}
+
 .count-and-button {
   display: flex;
   justify-content: center;

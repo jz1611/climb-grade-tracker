@@ -90,7 +90,6 @@ class Main extends React.Component {
     const attempts = this.state.nextAttempts;
     const completes = this.state.nextCompletes;
     const record = this.state.nextRecord;
-    console.log(this.state.routes)
     axios
       .put(`/api/route/${id}`, { attempts, completes, record })
       .then(res => {
