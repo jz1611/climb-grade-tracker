@@ -5,8 +5,8 @@ import './RouteList.css';
 class RouteList extends React.Component {
   render() {
     const { routes } = this.props;
-    const mappedRoutes = routes.map(route => {
-      return <div key={route.id} className="route" onClick={() => this.props.getRouteByID(route.id)}>
+    const mappedRoutes = routes.map((route, index) => {
+      return <div key={route.id} className="route" onClick={() => this.props.getRouteByID(index)}>
         <button onClick={() => this.props.removeRoute(route.id)}>X</button>
         <div>{route.nickname}</div>
         <div>Difficulty:&nbsp;{route.difficulty}</div>

@@ -1,4 +1,4 @@
-const routes = require('../data.json');
+const routes = require('../routes.json');
 let id = 2;
 
 function getIndex(id) {

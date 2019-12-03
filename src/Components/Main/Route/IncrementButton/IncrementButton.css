@@ -1,0 +1,15 @@
+.incrementor {
+  background-color: transparent;
+  font-size: 25px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  border: solid 3px rgb(97, 122, 172);
+  color: rgb(97, 122, 172);
+  font-weight: 800;
+  outline: none;
+}
+
+.incrementor:hover {
+  cursor: pointer;
+}

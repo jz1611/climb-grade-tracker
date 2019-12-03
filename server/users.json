@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Jeff",
+    "level": "Novice",
+    "picUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png"
+  },
+
+  {
+    "id": 2,
+    "name": "Molly",
+    "level": "Beginner",
+    "picUrl": "https://cdn4.iconfinder.com/data/icons/faces-10/96/Smiley-512.png"
+  }
+]
